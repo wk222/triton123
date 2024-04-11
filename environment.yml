@@ -1,0 +1,10 @@
+name: env
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.8
+  - pytorch=2.2.2 # 示例版本，替换为你需要的版本
+  - torchvision # 如果需要
+  - cudatoolkit=12.1 # 如果需要GPU支持，版本号应与你的CUDA版本相匹配
