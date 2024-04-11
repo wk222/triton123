@@ -33,7 +33,10 @@ jobs:
             echo '::set-output name=matrix-required::["ubuntu-latest"]'
             echo '::set-output name=matrix-optional::["ubuntu-latest"]'
           fi
-
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-xdist # 安装pytest和pytest-xdist，你可以在这里添加任何其他必需的
   Integration-Tests:
     needs: Runner-Preparation
 
